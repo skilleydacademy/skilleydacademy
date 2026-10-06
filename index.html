@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Skilleyd Academy — Non serve più formazione. Serve un'Academy che lasci un'impronta.</title>
 <meta name="description" content="Skilleyd Academy trasforma 3 minuti al giorno in competenze misurabili per workforce distribuite: negozi, hotel, reparti, sedi.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -74,6 +76,7 @@
     display:flex;align-items:center;gap:9px;
   }
   .logo .dot{width:8px;height:8px;border-radius:2px;background:var(--indigo-soft);display:inline-block;}
+  .logo-img{height:30px;width:auto;display:block;}
   .navlinks{display:flex;gap:30px;align-items:center;}
   .navlinks a{
     font-size:0.85rem;color:#B7BDC9;
@@ -257,6 +260,25 @@
     border-bottom:1px solid var(--indigo);padding-bottom:2px;
   }
 
+  /* ---------- CHI SIAMO / TEAM ---------- */
+  .team-section{background:var(--paper);}
+  .team-intro{max-width:62ch;margin-bottom:56px;}
+  .team-intro p{color:var(--slate);font-size:1.02rem;}
+  .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;}
+  .team-card{text-align:left;}
+  .team-photo{
+    width:100%;aspect-ratio:1/1;border-radius:12px;overflow:hidden;
+    margin-bottom:18px;background:var(--paper-dim);
+  }
+  .team-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+  .team-card h3{font-size:1.05rem;margin-bottom:4px;}
+  .team-card .team-role{
+    color:var(--indigo);font-size:0.8rem;font-weight:600;margin-bottom:10px;display:block;
+  }
+  .team-card p{color:var(--slate);font-size:0.88rem;}
+  @media (max-width:860px){.team-grid{grid-template-columns:1fr 1fr;row-gap:36px;}}
+  @media (max-width:560px){.team-grid{grid-template-columns:1fr;}}
+
   /* ---------- NUMBERS ---------- */
   .numbers{background:var(--ink);color:var(--paper);}
   .numbers .section-head{text-align:center;margin:0 auto 60px;}
@@ -281,7 +303,7 @@
     padding-bottom:52px;border-bottom:1px solid var(--line-light);margin-bottom:52px;
   }
   .logo-row span{opacity:0.55;}
-  .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
   .case-card{
     background:var(--paper-dim);border:1px solid var(--line-light);border-radius:12px;padding:30px;
   }
@@ -427,13 +449,14 @@
 
 <header>
   <nav>
-    <div class="logo"><span class="dot"></span>Skilleyd <span style="color:#8A93A3;font-weight:500;">Academy</span></div>
+    <a href="#hero" class="logo"><img src="assets/logo-skilleyd.png" alt="Skilleyd Lab" class="logo-img"></a>
     <div class="navlinks">
       <a href="#problema">Il problema</a>
       <a href="#soluzione">Soluzione</a>
       <a href="#come-funziona">Come funziona</a>
+      <a href="#chi-siamo">Chi siamo</a>
       <a href="#clienti">Clienti</a>
-      <a href="#contatti" class="nav-cta">Prenota una demo</a>
+      <a href="#contatti" class="nav-cta">Prenota una call conoscitiva</a>
     </div>
   </nav>
 </header>
@@ -474,8 +497,8 @@
         </h1>
         <p class="lead">Skilleyd Academy trasforma 3 minuti al giorno in competenze misurabili. Per aziende con centinaia di persone sparse su negozi, hotel, reparti e sedi. Senza fermare la produzione. Senza chiudere per formare.</p>
         <div class="hero-ctas">
-          <a href="#contatti" class="btn-primary">Prenota una demo con i tuoi dati</a>
-          <a href="#clienti" class="btn-secondary-link">↓ Scarica il caso GDO (4.000 addetti, +36% efficacia)</a>
+          <a href="#contatti" class="btn-primary">Prenota una call conoscitiva con i tuoi dati</a>
+          <a href="#clienti" class="btn-secondary-link">↓ Vedi il caso GDO (4.000 addetti, +36% efficacia)</a>
         </div>
         <p class="hero-micro">Nessun impegno. La demo dura 20 minuti e la prepariamo sui tuoi numeri.</p>
       </div>
@@ -529,8 +552,8 @@
   <div class="wrap">
     <div class="section-head on-dark reveal">
       <span class="mono">La soluzione</span>
-      <h2>Skilleyd Academy. Non è un LMS. È un sistema di certificazione delle competenze pratiche.</h2>
-      <p class="lead-body">Costruiamo la tua Academy digitale su misura. Contenuti ad hoc per il tuo settore, i tuoi prodotti, i tuoi comportamenti. Poi la rendiamo un'abitudine quotidiana: 3-5 minuti di micro-casi realistici, feedback immediato, gamification che genera cultura. Il risultato? Dipendenti che non hanno "fatto un corso". Hanno un DNA.</p>
+      <h2>Skilleyd Academy. Non è un LMS.</h2>
+      <p class="lead-body">È contenuti formativi ad hoc per il tuo settore, i tuoi prodotti, i tuoi comportamenti. Li rendiamo un'abitudine quotidiana: 3-5 minuti di micro-casi realistici, feedback immediato, gamification che genera cultura. A seguito del percorso ti verrà rilasciata una certificazione che dimostra le competenze acquisite. Il risultato? Dipendenti che non hanno "fatto un corso". Hanno un DNA.</p>
     </div>
     <div class="pillars reveal-stagger">
       <div class="pillar">
@@ -623,6 +646,43 @@
   </div>
 </section>
 
+<!-- ================= CHI SIAMO / TEAM ================= -->
+<section class="team-section" id="chi-siamo">
+  <div class="wrap">
+    <div class="section-head team-intro reveal">
+      <span class="mono">Chi siamo</span>
+      <h2>Il Turtle Team: ripensiamo il concetto di formazione.</h2>
+      <p>Skilleyd nasce da quattro fondatori e consulenti esperti in competenze aziendali, un team che unisce coaching, consulenza e insegnamento per un approccio nuovo allo sviluppo delle persone.</p>
+    </div>
+    <div class="team-grid reveal-stagger">
+      <div class="team-card">
+        <div class="team-photo"><img src="team/team-francesca-battaglino.jpg" alt="Francesca Battaglino"></div>
+        <h3>Francesca Battaglino</h3>
+        <span class="team-role">Responsabile Progettazione Percorsi</span>
+        <p>Definisce le competenze da allenare nei percorsi e i criteri con cui vengono misurate, secondo il metodo Skilleyd®.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-photo"><img src="team/team-stefano-monticelli.jpg" alt="Stefano Monticelli"></div>
+        <h3>Stefano Monticelli</h3>
+        <span class="team-role">Responsabile Sviluppo Prodotto</span>
+        <p>Progetta gli strumenti digitali di allenamento e certificazione delle competenze alla base del metodo.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-photo"><img src="team/team-giovanni-tonon.jpg" alt="Giovanni Tonon"></div>
+        <h3>Giovanni Tonon</h3>
+        <span class="team-role">Responsabile Consulenza e Relazioni coi clienti</span>
+        <p>Segue la relazione con le aziende clienti e accompagna la costruzione dei percorsi su misura.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-photo"><img src="team/team-stefano-za.jpg" alt="Stefano Za"></div>
+        <h3>Stefano Za</h3>
+        <span class="team-role">Direttore del Comitato Scientifico</span>
+        <p>Valuta le metodologie e le piattaforme digitali con il maggiore impatto reale sui risultati di apprendimento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= CLIENTI ================= -->
 <section class="clients" id="clienti">
   <div class="wrap">
@@ -631,15 +691,15 @@
       <h2>Aziende che hanno scelto di misurare il cambiamento reale.</h2>
     </div>
     <div class="logo-row reveal">
-      <span>Retail Fashion</span>
-      <span>Grande Distribuzione</span>
-      <span>Hotellerie</span>
-      <span>Retail Alimentare</span>
+      <span>Yamamay</span>
+      <span>Coop Alleanza 3.0</span>
+      <span>B&amp;B Hotels</span>
+      <span>Carrefour</span>
       <span>Media &amp; Broadcasting</span>
     </div>
     <div class="case-grid reveal-stagger">
       <div class="case-card">
-        <span class="mono">Retail Fashion · 400+ store</span>
+        <span class="mono">Yamamay · 400+ store</span>
         <h3>Italia &amp; Estero</h3>
         <p class="quote">"Abbiamo creato la nostra Academy digitale gamificata: campionati internazionali tra regioni, integrazione totale con i sistemi HR."</p>
         <div class="metrics">
@@ -648,21 +708,29 @@
         </div>
       </div>
       <div class="case-card">
-        <span class="mono">Grande Distribuzione · Progetto pilota</span>
+        <span class="mono">Coop Alleanza 3.0 · Progetto pilota</span>
         <h3>4.000 addetti</h3>
         <p class="quote">"Survey iniziale, aule di kick-off, app training con campionati tra iper e supermercati, aule di follow-up per celebrare il cambiamento."</p>
         <div class="metrics">
           <span class="metric-pill">84% engagement</span>
-          <span class="metric-pill">+36% efficacia</span>
+          <span class="metric-pill">+36% efficacia reale delle skill allenate</span>
           <span class="metric-pill">ROI certificato</span>
         </div>
       </div>
       <div class="case-card">
-        <span class="mono">Hotellerie · Europa</span>
+        <span class="mono">B&amp;B Hotels · Europa</span>
         <h3>Multi-ruolo</h3>
         <p class="quote">"Contenuti ad hoc, video personalizzati, percorsi differenziati per store, sede e management. Un'Academy che sembra cucita su misura. Perché lo è."</p>
         <div class="metrics">
           <span class="metric-pill">Multi-Paese</span>
+        </div>
+      </div>
+      <div class="case-card">
+        <span class="mono">Carrefour · Rete punti vendita</span>
+        <h3>Programma fedeltà</h3>
+        <p class="quote">"Micro-training quotidiano dedicato al personale di cassa e vendita per aumentare la proposta attiva della tessera fedeltà ai clienti."</p>
+        <div class="metrics">
+          <span class="metric-pill">+33% sottoscrizioni tessere</span>
         </div>
       </div>
     </div>
@@ -711,11 +779,10 @@
         <span class="mono" style="color:var(--indigo-soft);">Iniziamo</span>
         <h2 style="margin-top:16px;">Non serve più formazione. Serve un'Academy che lasci un'impronta.</h2>
         <p>Se gestisci centinaia di persone su negozi, hotel, reparti o sedi diverse, Skilleyd Academy è la piattaforma che scala con te. Senza perdere la personalizzazione. Senza fermare la produzione.</p>
-        <p>Prenota una demo di 20 minuti. La prepariamo sui tuoi numeri, i tuoi settori, i tuoi obiettivi.</p>
-        <a href="#" class="btn-secondary-link" id="cost-sim-link">Oppure richiedi una simulazione costi gratuita →</a>
+        <p>Prenota una call conoscitiva di 20 minuti. La prepariamo sui tuoi numeri, i tuoi settori, i tuoi obiettivi.</p>
       </div>
       <form class="demo-form reveal" id="demo-form">
-        <span class="mono">Prenota la tua demo</span>
+        <span class="mono">Prenota la tua call conoscitiva</span>
         <!-- Sostituisci il valore qui sotto con la tua Access Key di Web3Forms (gratuita su web3forms.com) -->
         <input type="hidden" name="access_key" value="8f54a036-9ac2-443a-971e-1776c4ff2d69">
         <input type="hidden" name="subject" value="Nuova richiesta demo — Skilleyd Academy">
@@ -740,7 +807,7 @@
           <input id="f-consenso" type="checkbox" required style="width:auto;margin-top:3px;">
           <label for="f-consenso" style="font-size:0.8rem;line-height:1.4;">Acconsento al trattamento dei miei dati secondo la <a href="privacy.html" class="link-underline" style="font-size:0.8rem;">Privacy Policy</a>.</label>
         </div>
-        <button type="submit" class="btn-primary" id="form-submit-btn">Prenota la tua demo</button>
+        <button type="submit" class="btn-primary" id="form-submit-btn">Prenota la tua call conoscitiva</button>
         <p class="hero-micro" style="text-align:center;margin-top:12px;">Nessun impegno. Nessuna carta di credito. Solo numeri e un metodo.</p>
         <p class="form-success" id="form-success">Grazie! Ti ricontatteremo entro 24 ore lavorative.</p>
         <p class="form-success" id="form-error" style="color:#E37B7B;">Si è verificato un errore nell'invio. Riprova o scrivici direttamente via email.</p>
@@ -752,11 +819,13 @@
 <footer>
   <div class="wrap">
     <div class="footer-inner">
-      <div class="logo"><span class="dot"></span>Skilleyd <span style="color:#8A93A3;font-weight:500;">Academy</span></div>
+      <a href="#hero" class="logo"><img src="assets/logo-skilleyd.png" alt="Skilleyd Lab" class="logo-img"></a>
       <div class="footer-links">
         <a href="privacy.html">Privacy</a>
         <a href="cookie.html">Cookie</a>
-        <a href="#">LinkedIn</a>
+        <a href="https://www.linkedin.com/company/skilleyd/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/skilleyd.lab?stkn=MWRncDI2eTEwb3V0Yw%3D%3D&utm_source=qr" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.skilleyd.net/site/" target="_blank" rel="noopener">Sito istituzionale</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -767,7 +836,7 @@
 </footer>
 
 <div class="sticky-cta" id="sticky-cta">
-  <a href="#contatti">Prenota una demo</a>
+  <a href="#contatti">Prenota una call conoscitiva</a>
 </div>
 
 <div class="cookie-banner" id="cookie-banner">
@@ -889,12 +958,12 @@
       } else {
         errorMsg.classList.add('show');
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Prenota la tua demo';
+        submitBtn.textContent = 'Prenota la tua call conoscitiva';
       }
     } catch(err){
       errorMsg.classList.add('show');
       submitBtn.disabled = false;
-      submitBtn.textContent = 'Prenota la tua demo';
+      submitBtn.textContent = 'Prenota la tua call conoscitiva';
     }
   });
 </script>
